@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"rel="stylesheet"/>
+    <title>RP</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">weather App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About this App
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Delhi</a></li>
+                  <li><a class="dropdown-item" href="#">Jharkhand</a></li>
+                  <li><a class="dropdown-item" href="#">Bihar</a></li>
+                  <li><a class="dropdown-item" href="#">New Source</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit" id="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+    <h1 class="my-4 text-center">Weather For <span id="cityName" ></span></h1>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center my-5">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 text-white bg-warning">
+              <h4 class="my-0 fw-normal">Temperature</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title"> <span id="temp2"></span><small class="text-muted fw-light">&#8451;</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Temperature is: <span id="temp"></span></li>
+                <li>Min Temperature is: <span id="min_temp"></span></li>
+                <li>Max Temperature is: <span id="max_temp"></span></li>
+                <li>Cloud Pct is: <span id="cloud_pct"></span></li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-success text-white"> Signup for free</button>
+            </div>
+          </div>
+      </div>
+        <div class="col">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-header py-3 bg-warning  text-white">
+              <h4 class="my-0 fw-normal">Humidity info</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title"> <span id="humidity2"></span><small class="text-muted fw-light"> %</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Wind degree is: <span id="wind_degrees"></span></li>
+                <li>Feels Like is: <span id="feels_like"></span></li>
+                <li>Humidity is: <span id="humidity"></span></li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-success">Get started</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 text-white bg-warning">
+              <h4 class="my-0 fw-normal">Wind info</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title"><span id="wind_speed2"></span><small class="text-muted fw-light">Km/hr</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Wind Speed is: <span id="wind_speed"></span></li>
+                <li>Sunrise Times is: <span id="sunrise"></span></li>
+                <li>Sunset Times is: <span id="sunset"></span></li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-success">Contact us</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="display-6 text-center mb-4">weather of other Common Places</h2>
+      <div class="table-responsive">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th style="width: 34%;"></th>
+              <th style="width: 22%;">Wind_speed</th>
+              <th style="width: 22%;">Feels_like</th>
+              <th style="width: 22%;">Humidity</th>
+              <th style="width: 22%;">Max_temp</th>
+              <th style="width: 22%;">Min_temp</th>
+              <th style="width: 22%;">Sunrise</th>
+              <th style="width: 22%;">Sunset</th>
+              <th style="width: 22%;">Temp</th>
+              <th style="width: 22%;">Wind_degrees</th>
+              <th style="width: 22%;">cloud_pct</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="text-start">Delhi</th>
+              <td><span id="wind_speed3"></span></td>
+              <td><span id="feels_like1"></span></td>
+              <td><span id="humidity3"></span></td>
+              <td><span id="max_temp1"></span></td>
+              <td><span id="min_temp1"></span></td>
+              <td><span id="sunrise1"></span></td>
+              <td><span id="sunset1"></span></td>
+              <td><span id="temp3"></span></td>
+              <td><span id="wind_degrees1"></span></td>
+              <td><span id="cloud_pct1"></span></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th scope="row" class="text-start">Kolkata</th>
+              <td>3</td>
+              <td>1</td>
+              <td>54</td>
+              <td>23</td>
+              <td>65</td>
+              <td>1</td>
+              <td>6</td>
+              <td>5</td>
+              <td>5</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th scope="row" class="text-start">Jharkhand</th>
+              <td>4</td>
+              <td>2</td>
+              <td>12</td>
+              <td>02</td>
+              <td>4</td>
+              <td>2</td>
+              <td>8</td>
+              <td>8</td>
+              <td>20</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        <tbody>
+            <tr>
+              <th scope="row" class="text-start">Bihar</th>
+              <td>2</td>
+              <td>12</td>
+              <td>76</td>
+              <td>72</td>
+              <td>0</td>
+              <td>4</td>
+              <td>2</td>
+              <td>9</td>
+              <td>65</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <br><br>
+  <div class="header">
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+       <div class="me-5 d-none d-lg-block">
+         <span>Get connected with us on social networks:</span>
+     </div>
+         <div>
+         <a href="https://www.facebook.com/profile.php?id=100028804430751" class="mx-2 text-reset">
+           <i class="ri-facebook-fill"></i>
+         </a>
+         <a href="https://mail.google.com" class="mx-2 text-reset">
+           <i class="ri-mail-fill"></i>
+         </a>
+         <a href="https://wa.me/qr/ZRGUJTSW2AXFC1" class="mx-2 text-reset">
+           <i class="ri-whatsapp-fill"></i>
+         </a>
+         <a href="https://www.instagram.com/raghu_01_sharma?igsh=eTY2OXpneno0ODhp" class="mx-2 text-reset">
+             <i class="ri-instagram-line"></i>
+         </a>
+         <a href="https://www.linkedin.com/in/raghunandan-sharma-3991b4257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="mx-2 text-reset">
+             <i class="ri-linkedin-box-fill"></i>
+         </a>
+         <a href="https://github.com/RAGHUNANDANSHARMA01" class="mx-2 text-reset">
+             <i class="ri-github-fill"></i>
+         </a>
+         <a href="https://www.hackerrank.com/profile/raghunandan5544" class="mx-2 text-reset">
+             <i class="ri-code-fill"></i>
+         </a>
+     </div>
+     </section>
+   </div>
+     </div>
+     <section class="">
+       <div class="container text-center text-md-start mt-5">
+         <div class="row mt-3">
+           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+             <h6 class="text-uppercase fw-bold mb-4">
+                 <i class="ri-graduation-cap-fill"></i> Higher Education:
+             </h6>
+             <p>
+               <i class="ri-school-fill"></i>
+              Bharath Institute of Higher Education and Research (BIHER).<br>
+              Higher educational institution in Chennai, Tamil Nadu ,600073.
+             </p>
+           </div>
+           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+             <h6 class="text-uppercase fw-bold mb-4"> Contact</h6>
+             <p><i class="ri-home-heart-fill"></i> SIRSIYA GIRIDIH,JH,815312.</p>
+             <p>
+                 <i class="ri-mail-fill"></i>raghunandan5544@gmail.com
+             </p>
+             <p><i class="ri-phone-fill"></i>+917050987458</p>
+           </div>
+         </div>
+       </div>
+     </section>
+     <div class="text-center p-4 bg-primary" style="background-color: rgba(0, 0, 0, 0.05);">
+       © 2024 Copyright:
+       <a class="text-reset fw-bold text-white" href="https://media.licdn.com/dms/image/D5603AQEpbkxQI7WXQg/profile-displayphoto-shrink_200_200/0/1682148372012?e=2147483647&v=beta&t=_xx0iYZLYsLeMQqURqgAJcc2aa1lBsHdSOthRJ8w_OI">RAGHUNANDAN SHARMA</a>
+   </footer>     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="javascript.js"></script>
+  </body>
+</html>
